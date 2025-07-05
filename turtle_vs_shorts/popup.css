@@ -1,0 +1,147 @@
+:root {
+  --accent-light: #81c784;   /* Turtle leaf green */
+  --accent-dark: #388e3c;    /* Forest green */
+  --text-light: #2e2e2e;
+  --text-dark: #e0f2f1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #e8f5e9, #c8e6c9);
+  color: var(--text-light);
+  width: 360px;
+  height: 100%;
+  transition: background 0.3s ease;
+}
+
+body.dark {
+  background: linear-gradient(to bottom right, #1b5e20, #2e7d32);
+  color: var(--text-dark);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark .card {
+  background: rgba(30, 30, 30, 0.4);
+}
+
+h3 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+body.dark label {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+input[type="checkbox"] {
+  transform: scale(1.3);
+  accent-color: var(--accent-light);
+}
+
+body.dark input[type="checkbox"] {
+  accent-color: var(--accent-dark);
+}
+
+#statusMessage {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 13px;
+  padding: 8px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  font-weight: 500;
+}
+
+.mode-toggle {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.text-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #000;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 6px;
+}
+
+body.dark .text-input {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+button {
+  background: linear-gradient(to right, var(--accent-light), #a5d6a7);
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+body.dark button {
+  background: linear-gradient(to right, var(--accent-dark), #66bb6a);
+}
+
+p {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 16px;
+  opacity: 0.8;
+}
+
+.redirect-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding: 0 14px;
+}
+
+.redirect-buttons button {
+  background: linear-gradient(to right, var(--accent-light), #a5d6a7);
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+body.dark .redirect-buttons button {
+  background: linear-gradient(to right, var(--accent-dark), #66bb6a);
+}

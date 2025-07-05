@@ -1,0 +1,58 @@
+:root {
+  --accent-light: #81c784; /* Leafy turtle green */
+  --accent-dark: #388e3c;  /* Deep forest green */
+  --bg-light: linear-gradient(to bottom right, #e8f5e9, #c8e6c9);
+  --bg-dark: linear-gradient(to bottom right, #1b5e20, #2e7d32);
+  --text-light: #2e2e2e;
+  --text-dark: #e0f2f1;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+}
+
+body.dark .card {
+  background: rgba(30, 30, 30, 0.4);
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 16px;
+  margin: 0;
+  margin-top: 8px;
+  opacity: 0.9;
+}
+
+.emoji {
+  font-size: 64px;
+  display: block;
+  margin-bottom: 16px;
+}

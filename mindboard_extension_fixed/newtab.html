@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mindboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="mindboard"></canvas>
+
+  <div id="toolbar">
+    <button id="undo-btn">Undo</button>
+    <button id="redo-btn">Redo</button>
+    <button id="link-btn">Link</button>
+    <button id="image-btn">Insert Image</button>
+    <button id="clear-btn">Clear</button>
+    <button id="save-btn">Save</button>
+
+    <div class="control-group">
+      <label for="thickness-slider">Thickness:</label>
+      <input type="range" id="thickness-slider" min="1" max="20" />
+      <span id="thickness-value"></span>
+    </div>
+
+    <div class="control-group">
+      <label for="color-picker">Color:</label>
+      <div class="color-wrapper">
+        <input type="color" id="color-picker" />
+      </div>
+    </div>
+  </div>
+
+  <script src="mindboard.js"></script>
+</body>
+</html>

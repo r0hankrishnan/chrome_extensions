@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="card">
+    <h3>YouTube Shorts Blocker</h3>
+
+    <label>
+      Hide Shorts UI
+      <input type="checkbox" id="hideToggle">
+    </label>
+
+    <label>
+      Block Shorts URLs
+      <input type="checkbox" id="blockToggle">
+    </label>
+
+    <label>
+      Custom Redirect URL
+      <input type="text" id="redirectInput" placeholder="touchgrasss.com" class="text-input" style="flex: 1; margin-left: 10px;">
+    </label>
+    
+    <div class="redirect-buttons">
+      <button id="saveRedirectBtn">Save Redirect</button>
+      <button id="clearRedirectBtn">Clear Redirect</button>
+    </div>
+
+    <div id="statusMessage"></div>
+    <div class="mode-toggle">
+      <button id="themeToggle">Toggle Theme</button>
+    </div>
+    <p>Made with papi ChatGPT to help you touch grass.</p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mindboard Settings</title>
+</head>
+<body>
+  <h1>Mindboard Settings</h1>
+  <label>
+    <input type="checkbox" id="toggle-canvas" />
+    Use canvas on new tab
+  </label>
+  <script>
+    const checkbox = document.getElementById('toggle-canvas');
+    chrome.storage.sync.get(['useCanvas'], ({ useCanvas }) => {
+      checkbox.checked = !!useCanvas;
+    });
+
+    checkbox.addEventListener('change', () => {
+      chrome.storage.sync.set({ useCanvas: checkbox.checked });
+    });
+  </script>
+</body>
+</html>
