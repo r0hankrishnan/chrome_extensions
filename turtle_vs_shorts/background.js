@@ -38,8 +38,8 @@ function updateBlocking(enabled) {
 // Show badge icon on YouTube
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   if (tab.url && tab.url.includes("youtube.com")) {
-    chrome.action.setBadgeText({ tabId, text: "🧱" });
-    chrome.action.setBadgeBackgroundColor({ tabId, color: "#00e676" });
+    chrome.action.setBadgeText({ tabId, text: "" });
+    chrome.action.setBadgeBackgroundColor({ tabId, color: "#6BD46C" });
   } else {
     chrome.action.setBadgeText({ tabId, text: "" });
   }
