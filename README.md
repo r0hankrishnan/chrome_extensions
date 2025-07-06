@@ -1,4 +1,4 @@
-# chrome_extensions
+# Chrome Extensions
 A collection of chrome extensions (mostly made iteratively with Chat GPT)
 
 ## Turtle Vs Shorts
