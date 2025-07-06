@@ -20,7 +20,7 @@ function updateBlocking(enabled) {
         "priority": 1,
         "action": {
           "type": "redirect",
-          "redirect": { "url": "https://www.touchgrasss.com/" }
+          "redirect": { "url": "https://www.youtube.com/" }
         },
         "condition": {
           "urlFilter": "youtube.com/shorts/",
