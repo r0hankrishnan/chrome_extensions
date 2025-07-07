@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Turtle vs Shorts",
   "version": "2.1",
-  "description": "Say goodbye to YouTube Shorts. This extension blocks Shorts from the homepage, removes Shorts UI elements, and redirects Shorts links to a block screen.",
+  "description": "This extension blocks Shorts from the homepage, removes Shorts UI elements, and redirects Shorts links to a block screen.",
   "permissions": [
     "storage",
     "declarativeNetRequest",

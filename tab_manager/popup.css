@@ -1,0 +1,227 @@
+/* Updated CSS Variables for New Color Scheme */
+:root {
+  --bg-light: #F8F9FA;
+  --bg-dark: #1E293B;
+  --text-light: #1F2937;
+  --text-dark: #F1F5F9;
+  --card-light: #FFFFFF;
+  --card-dark: #475569;
+  --primary-accent-light: #8B5CF6;
+  --primary-accent-dark: #A855F7;
+  --secondary-accent-light: #06B6D4;
+  --secondary-accent-dark: #22D3EE;
+  --neutral-light: #E5E7EB;
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.container {
+  padding: 16px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+#themeToggle {
+  background: var(--primary-accent-light);
+  border: none;
+  border-radius: var(--radius);
+  padding: 6px 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background var(--transition);
+}
+
+/* Inputs & Textarea base style */
+#saveSession input,
+#saveSession textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  background-color: white;
+  color: var(--text-light);
+  border: 1px solid #ccc;
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+}
+
+/* Light Theme inputs */
+body.light #saveSession input,
+body.light #saveSession textarea {
+  background-color: white;
+  color: var(--text-light);
+  border: 1px solid #ccc;
+}
+
+#saveBtn {
+  width: 100%;
+  background: linear-gradient(to right, var(--primary-accent-light), #7C3AED);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+#saveBtn:hover {
+  background: linear-gradient(to right, #7C3AED, #8B5CF6);
+}
+
+#sessionList h2 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+#sessions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Session cards */
+#sessions li {
+  max-width: 280px;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+
+  background: var(--card-light);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  transition: background-color var(--transition), border-color var(--transition), box-shadow var(--transition);
+  color: var(--text-light);
+}
+
+#sessions li:hover {
+  background: #f1f2f6;
+  border-color: var(--primary-accent-light);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+}
+
+body.dark #sessions li {
+  background: var(--card-dark);
+  color: var(--text-dark);
+}
+
+body.dark #sessions li:hover {
+  background: #3f4a60;
+  border-color: var(--primary-accent-dark);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+}
+
+#sessions li button {
+  align-self: flex-start;
+  background: var(--primary-accent-light);
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.25s ease;
+  margin-right: 8px;
+}
+
+#sessions li button + button {
+  margin-left: 8px;
+}
+
+#sessions li button:hover {
+  background: #7C3AED;
+}
+
+body.dark #sessions li button {
+  background: var(--primary-accent-dark);
+}
+
+body.dark #sessions li button:hover {
+  background: #9333EA;
+}
+
+#sessions li .button-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* Message toast */
+#message {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-accent-light);
+  color: white;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+}
+
+#message.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.dark #message {
+  background: var(--primary-accent-dark);
+}
+
+/* Light Theme */
+body.light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.light #sessions li {
+  background: var(--card-light);
+  color: var(--text-light);
+}
+
+/* Dark Theme */
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.dark #saveSession input,
+body.dark #saveSession textarea {
+  background-color: #334155;
+  color: var(--text-dark);
+  border: 1px solid #555;
+}

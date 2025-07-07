@@ -1,10 +1,10 @@
 :root {
-  --accent-light: #ff0000; /* YouTube Red */
-  --accent-dark: #cc0000;  /* Darker Red */
-  --bg-light: #ffffff;
-  --bg-dark: #0f0f0f;
-  --text-light: #0f0f0f;
-  --text-dark: #f1f1f1;
+  --accent-light: #81c784; /* Leafy turtle green */
+  --accent-dark: #388e3c;  /* Deep forest green */
+  --bg-light: linear-gradient(to bottom right, #e8f5e9, #c8e6c9);
+  --bg-dark: linear-gradient(to bottom right, #1b5e20, #2e7d32);
+  --text-light: #2e2e2e;
+  --text-dark: #e0f2f1;
 }
 
 body {
@@ -25,28 +25,23 @@ body.dark {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 40px;
   text-align: center;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   max-width: 400px;
 }
 
 body.dark .card {
-  background: rgba(33, 33, 33, 0.6);
+  background: rgba(30, 30, 30, 0.4);
 }
 
 h1 {
   font-size: 28px;
   margin-bottom: 12px;
-  color: var(--accent-light);
-}
-
-body.dark h1 {
-  color: var(--accent-dark);
 }
 
 p {
@@ -60,9 +55,4 @@ p {
   font-size: 64px;
   display: block;
   margin-bottom: 16px;
-}
-
-.emoji img{
-    height: 3em;
-    width: auto;
 }
