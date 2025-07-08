@@ -2,7 +2,7 @@
 {
   "manifest_version": 3,
   "name": "Pocket Prompt",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Save, tag, and reuse LLM prompts.",
   "permissions": ["storage", "clipboardWrite"],
   "action": {

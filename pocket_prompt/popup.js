@@ -1,6 +1,41 @@
 
 let editingIndex = null;
 let tagFilter = null;
+let promptToDeleteIndex = null;
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.classList.add("show");
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 1500);
+}
+
+function showDeleteModal(index) {
+  promptToDeleteIndex = index;
+  document.getElementById('confirm-modal').classList.remove('hidden');
+}
+
+function hideDeleteModal() {
+  promptToDeleteIndex = null;
+  document.getElementById('confirm-modal').classList.add('hidden');
+}
+
+document.getElementById('confirm-delete-btn').addEventListener('click', () => {
+  chrome.storage.local.get(["prompts"], (result) => {
+    const allPrompts = result.prompts || [];
+    allPrompts.splice(promptToDeleteIndex, 1);
+    chrome.storage.local.set({ prompts: allPrompts }, () => {
+      loadPrompts();
+      showToast("Prompt deleted.");
+      hideDeleteModal();
+    });
+  });
+});
+
+document.getElementById('cancel-delete-btn').addEventListener('click', hideDeleteModal);
+
 
 function getTagColorClass(tagText) {
   const colors = 6;
@@ -85,7 +120,9 @@ function renderPrompts(prompts) {
       copyBtn.className = "copy-btn";
       copyBtn.textContent = "Copy";
       copyBtn.onclick = () => {
-        navigator.clipboard.writeText(prompt.prompt);
+        navigator.clipboard.writeText(prompt.prompt).then(() => {
+          showToast("Prompt copied to clipboard!");
+        });
       };
 
       const editBtn = document.createElement("button");
@@ -116,13 +153,7 @@ function renderPrompts(prompts) {
       deleteBtn.className = "delete-btn";
       deleteBtn.textContent = "Delete";
       deleteBtn.onclick = () => {
-        chrome.storage.local.get(["prompts"], (result) => {
-          const allPrompts = result.prompts || [];
-          allPrompts.splice(index, 1);
-          chrome.storage.local.set({ prompts: allPrompts }, () => {
-            loadPrompts();
-          });
-        });
+        showDeleteModal(index);
       };
 
       actions.appendChild(copyBtn);

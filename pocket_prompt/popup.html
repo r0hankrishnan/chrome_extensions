@@ -1,16 +1,8 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>Pocket Prompt</title>
   <link rel="stylesheet" href="styles.css" />
-    <style>
-    #footer {
-      font-size: 11px;
-      font-weight: lighter;
-      color: #617385;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -20,18 +12,37 @@
       <span class="slider"></span>
     </label>
   </header>
+
   <form>
     <input type="text" id="prompt-title" placeholder="Title" />
     <textarea id="prompt-text" placeholder="Prompt text"></textarea>
     <input type="text" id="prompt-tags" placeholder="Comma-separated tags" />
     <button type="button" id="save-btn">Save</button>
   </form>
+
   <input type="text" id="search" placeholder="Search by title or tag..." />
   <div style="margin: 0 10px 5px;">
     <button id="tag-filter-clear" style="display:none; margin-top: 5px;">Clear Tag Filter</button>
   </div>
+
   <div class="prompt-list" id="prompt-list"></div>
+
   <p id="footer" align="center">Made with papi Chat GPT to help you organize your LLM prompts</p>
+
+  <!-- Toast Message -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Delete Confirmation Modal -->
+  <div id="confirm-modal" class="modal hidden">
+    <div class="modal-content">
+      <p>Are you sure you want to delete this prompt?</p>
+      <div class="modal-buttons">
+        <button id="confirm-delete-btn" class="delete-btn">Yes, Delete</button>
+        <button id="cancel-delete-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
   <script src="popup.js"></script>
 </body>
 </html>
