@@ -2,6 +2,7 @@
 A collection of chrome extensions (mostly made iteratively with Chat GPT). I am not a great web developer so I let this repository be my compendium of **vibe-coded web dev projects.**
 
 *Q: This extension seems useful, can you publish it on the Chrome Extension Store?*
+
 *A: Unfortunately since literally all of these extensions were vibe coded, I do not plan to release them on the Chrome Extension Store. I do, however use these regularly (especially Turtle Vs Shorts)! If you also want to use one of these, clone this repository and take your pick of your favorite (after reviewing the code of course ;)). You can locally run chrome extensions by visiting chrome://extension, enabling developer mode, and unpacking the folder that holds your extension.*
 
 ## My Extensions (so far)
