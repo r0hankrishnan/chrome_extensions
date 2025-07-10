@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Temporary Tab Mode</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <span class="logo">
+        <img src="temporary-tab.svg"></img>
+      </span>
+      <div>
+        <h1>Temporary Tab Mode</h1>
+        <p class="subtext">Focus-friendly browsing</p>
+      </div>
+      <div class="dark-toggle">
+        <label class="switch">
+          <input type="checkbox" id="darkModeToggle" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </header>
+
+    <section class="status">
+      <div class="toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="toggle">
+          <span class="slider round"></span>
+        </label>
+        <span id="statusText">Enabled</span>
+      </div>
+    </section>
+
+    <section class="timer-section">
+      <label for="timer">⏱️ Auto-close after:</label>
+      <div class="timer-input">
+        <input type="number" id="timer" min="1" max="60" />
+        <span>minutes</span>
+      </div>
+    </section>
+
+    <section class="site-section">
+      <label>🌐 Disposable Websites:</label>
+      <ul id="site-list" class="site-list"></ul>
+      <div class="site-input-group">
+        <input type="text" id="site-input" placeholder="e.g., twitter.com" />
+        <button id="add-site">Add</button>
+      </div>
+    </section>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
