@@ -1,4 +1,6 @@
 # Chrome Extensions
+> This repository is no longer maintained. If you are interested in using any of these, please review the code first. Also, consider switching to FireFox if you're looking for more privacy and control :)
+ 
 A collection of chrome extensions (mostly made iteratively with Chat GPT). I am not a great web developer so I let this repository be my compendium of **vibe-coded web dev projects.**
 
 *Q: This extension seems useful, can you publish it on the Chrome Extension Store?*
