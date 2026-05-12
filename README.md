@@ -16,3 +16,6 @@ Chrome extension that allows a user to open a canvas instead of a new tab. This 
 
 ### Pocket Prompts
 Chrome extension that allows a user to save frequently used prompts. Includes tagging, sorting by tags, and search functionality.
+
+### Tab Manager
+Save and restore tabs with notes.
