@@ -22,3 +22,6 @@ Save and restore tabs with notes.
 
 ### Temporary Tab Mode
 Open sites in timed tabs that auto-close. Add your own list. Avoid distractions.
+
+### Student Start Page
+A clean new tab dashboard for students.
